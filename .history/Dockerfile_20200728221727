@@ -47,7 +47,7 @@ make -j ${jobs} modules
 # The post kernel build process
 
 ENV ROOTFS          /rootfs
-ENV TCL_REPO_BASE   http://tinycorelinux.net/11.x/x86_64
+ENV TCL_REPO_BASE   http://tinycorelinux.net/11.x/x86-64
 ENV TCZ_DEPS        iptables \
                 iproute2 \
                 openssh openssl-1.0.0 \

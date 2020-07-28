@@ -18,7 +18,7 @@ RUN apt-get update && apt-get -y install  unzip \
                     nano \
                     pkg-config
 
-ENV KERNEL_VERSION  4.16.1
+ENV KERNEL_VERSION  3.16.1
 ENV AUFS_BRANCH     aufs3.16
 
 # Fetch the kernel sources
@@ -47,7 +47,7 @@ make -j ${jobs} modules
 # The post kernel build process
 
 ENV ROOTFS          /rootfs
-ENV TCL_REPO_BASE   http://tinycorelinux.net/11.x/x86_64
+ENV TCL_REPO_BASE   http://tinycorelinux.net/5.x/x86
 ENV TCZ_DEPS        iptables \
                 iproute2 \
                 openssh openssl-1.0.0 \
