@@ -7,7 +7,7 @@ RUN set -ex && \
     for dep in $GNU_DEPS; do \
         echo "Download $TCL_REPO_BASE/tcz/$dep.tcz"; \
         wget -O /tmp/$dep.tcz $TCL_REPO_BASE/tcz/$dep.tcz; \
-        unsquashfs -f -d $ROOTFS /tmp/$dep.tcz; \
+        unsquashfs -f -d  /tmp/$dep.tcz; \
         rm -f /tmp/$dep.tcz; \
     done
 
