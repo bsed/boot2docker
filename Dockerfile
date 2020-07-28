@@ -6,7 +6,7 @@ ENV GNU_DEPS coreutils samba-libs cifs-utils nano
 RUN set -ex && \
     for dep in $GNU_DEPS; do \
         echo "Download $TCL_REPO_BASE/tcz/$dep.tcz"; \
-        curl -fL -o /tmp/$dep.tcz $TCL_REPO_BASE/tcz/$dep.tcz; \
+        wget -O /tmp/$dep.tcz $TCL_REPO_BASE/tcz/$dep.tcz; \
         unsquashfs -f -d $ROOTFS /tmp/$dep.tcz; \
         rm -f /tmp/$dep.tcz; \
     done
